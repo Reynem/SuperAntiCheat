@@ -3,10 +3,8 @@ package com.example.superanticheat
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +21,7 @@ class RegisterActivity : AppCompatActivity() {
         val backButton: Button = findViewById(R.id.backButton)
         backButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent);
+            startActivity(intent)
         }
 
         val loginButton: Button = findViewById(R.id.login_butt)
