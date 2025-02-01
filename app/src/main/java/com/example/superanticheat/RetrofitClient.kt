@@ -23,7 +23,15 @@ data class User(
     val password: String
 )
 
+data class UserLogin(
+    val email: String,
+    val password: String
+)
+
 interface ApiService {
     @POST("/register")
     suspend fun registerUser(@Body user: User): Response<Any>
+
+    @POST("/login")
+    suspend fun loginUser(@Body user: UserLogin): Response<Any>
 }
