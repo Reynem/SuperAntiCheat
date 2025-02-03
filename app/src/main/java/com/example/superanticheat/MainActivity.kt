@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        AuthManager.init(applicationContext)
+        AuthManager.init(applicationContext) // следует изменить
         val accounts: Button = findViewById(R.id.account)
         accounts.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -37,6 +37,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+        }
+
+        val settings: Button = findViewById(R.id.settings)
+        settings.setOnClickListener{
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
         }
     }
     private fun startCameraFunction() {
