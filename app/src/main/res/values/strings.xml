@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SuperAntiCheat</string>
+    <string name="back">≪-Назад</string>
+    <string name="Authorisation">Авторизация</string>
+    <string name="Name">Имя</string>
+    <string name="Email">Почта</string>
+    <string name="Password">Пароль</string>
+    <string name="Enter">Войти</string>
+    <string name="forgotPass">Забыли пароль?</string>
+    <string name="Registration">Регистрация</string>
+    <string name="registerButt">Зарегистрироваться</string>
+    <string name="OKO">ОКО</string>
+    <string name="Settings">Button</string>
+    <string name="camera">Camera</string>
+    <string name="id">ID</string>
+    <string name="inProgress">НАХОДИТСЯ В РАЗРАБОТКЕ</string>
 </resources>

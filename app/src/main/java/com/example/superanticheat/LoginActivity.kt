@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity(){
         val backButton: Button = findViewById(R.id.backButton)
         backButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent);
+            startActivity(intent)
         }
         val toRegister: TextView = findViewById(R.id.toRegister)
         toRegister.setOnClickListener{
@@ -52,6 +52,12 @@ class LoginActivity : AppCompatActivity(){
 
                 if (response.isSuccessful) {
                     Toast.makeText(this@LoginActivity, "Авторизация успешна", Toast.LENGTH_SHORT).show()
+                    response.body()?.let {
+                        AuthManager.accessToken = it.access_token
+                        AuthManager.userId = it.user_id
+                    }
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this@LoginActivity, "Ошибка авторизации", Toast.LENGTH_SHORT).show()
                 }

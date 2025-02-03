@@ -1,28 +1,26 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Поле для ввода имени -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="117dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="3dp"
-        android:text="≪-Назад"
+        android:text="@string/back"
         app:cornerRadius="3dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:text="Авторизация"
+        android:text="@string/Authorisation"
         android:textSize="44sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -31,16 +29,15 @@
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Имя"/>
+        android:hint="@string/Name"/>
 
-    <!-- Поле для ввода почты -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Почта">
+        android:hint="@string/Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailInput"
@@ -49,15 +46,14 @@
             android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Поле для ввода пароля -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Пароль"
-        app:passwordToggleEnabled="true"> <!-- Включает иконку для показа/скрытия пароля -->
+        android:hint="@string/Password"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
@@ -70,13 +66,13 @@
         android:id="@+id/login_butt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Войти" />
+        android:text="@string/Enter" />
 
     <TextView
         android:id="@+id/toRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Забыли пароль?"
+        android:text="@string/forgotPass"
         android:textColor="#3F51B5" />
 
 </LinearLayout>

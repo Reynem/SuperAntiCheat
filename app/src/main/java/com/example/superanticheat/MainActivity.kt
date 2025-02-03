@@ -3,6 +3,7 @@ package com.example.superanticheat
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,11 +19,29 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        AuthManager.init(applicationContext)
         val accounts: Button = findViewById(R.id.account)
         accounts.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent);
+            startActivity(intent)
         }
-
+        val cameraFunc: Button = findViewById(R.id.Camera)
+        cameraFunc.setOnClickListener {
+            if (AuthManager.isLoggedIn) {
+                startCameraFunction()
+            } else {
+                Toast.makeText(this, "Для использования функции требуется авторизация", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+                finish()
+            }
+        }
+    }
+    private fun startCameraFunction() {
+        println("Функция запущена")
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 }
+

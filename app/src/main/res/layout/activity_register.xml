@@ -14,14 +14,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="3dp"
-        android:text="≪-Назад"
+        android:text="@string/back"
         app:cornerRadius="3dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:text="Регистрация"
+        android:text="@string/Registration"
         android:textSize="44sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Имя">
+        android:hint="@string/Name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameInput"
@@ -39,14 +39,13 @@
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Поле для ввода почты -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Почта">
+        android:hint="@string/Email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailInput"
@@ -55,14 +54,13 @@
             android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Поле для ввода пароля -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeWidth="1dp"
         app:boxStrokeColor="@color/black"
-        android:hint="Пароль"
+        android:hint="@string/Password"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -76,7 +74,7 @@
         android:id="@+id/registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Зарегистрироваться" />
+        android:text="@string/registerButt" />
 
     <View
         android:id="@+id/divider"
@@ -84,12 +82,13 @@
         android:layout_height="3sp"
         android:layout_margin="3sp"
         android:background="?android:attr/listDivider"
-        android:padding="5sp" />
+        android:padding="5sp"
+        tools:ignore="SmallSp" />
 
     <Button
         android:id="@+id/login_butt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Войти" />
+        android:text="@string/Enter" />
 
 </LinearLayout>
