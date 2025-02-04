@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        AuthManager.init(applicationContext) // следует изменить
         val accounts: Button = findViewById(R.id.account)
         accounts.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
