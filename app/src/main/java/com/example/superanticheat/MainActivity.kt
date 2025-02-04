@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun startCameraFunction() {
         println("Функция запущена")
-        startActivity(Intent(this, RegisterActivity::class.java))
+        startActivity(Intent(this, CameraActivity::class.java))
     }
 }
 
