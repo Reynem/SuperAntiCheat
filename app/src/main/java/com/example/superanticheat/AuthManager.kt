@@ -11,6 +11,9 @@ object AuthManager {
     private const val PREFS_NAME = "auth_prefs"
     private const val KEY_ACCESS_TOKEN = "access_token"
     private const val KEY_USER_ID = "user_id"
+    private const val KEY_NICKNAME = "nickname"
+
+
 
     private var context: Context? = null
 
@@ -25,6 +28,10 @@ object AuthManager {
     var accessToken: String?
         get() = sharedPreferences.getString(KEY_ACCESS_TOKEN, null)
         set(value) = sharedPreferences.edit().putString(KEY_ACCESS_TOKEN, value).apply()
+
+    var nickname: String?
+        get() = sharedPreferences.getString(KEY_NICKNAME, null)
+        set(value) = sharedPreferences.edit().putString(KEY_NICKNAME, value).apply()
 
     var userId: Long
         get() = sharedPreferences.getLong(KEY_USER_ID, -1)
