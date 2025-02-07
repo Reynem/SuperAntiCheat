@@ -15,4 +15,5 @@
     <string name="id">ID</string>
     <string name="inProgress">НАХОДИТСЯ В РАЗРАБОТКЕ</string>
     <string name="clearAcc">Выйти из аккаунта</string>
+    <string name="change_name">Сменить никнейм</string>
 </resources>

@@ -13,12 +13,14 @@ class SettingsActivity: AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activesettings)
 
-        val clearAccount: Button = findViewById(R.id.ClearAcc)
+        val clearAccount: Button = findViewById(R.id.clearAcc)
         clearAccount.setOnClickListener{
             AuthManager.clear()
             Toast.makeText(this, "Вы успешно вышли с аккаунта", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        val changeName: Button = findViewById(R.id.ChangeName)
+
     }
 }
