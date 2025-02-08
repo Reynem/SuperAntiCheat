@@ -9,7 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
-
+import retrofit2.Call
+import retrofit2.http.Header
+import retrofit2.http.PUT
 
 object RetrofitClient {
     private const val BASE_URL = "http://10.0.2.2:8000/"
@@ -62,6 +64,9 @@ data class SomeDataModel(
     val createdAt: String
 )
 
+data class UpdateNameRequest(val new_name: String)
+data class UpdateNameResponse(val message: String, val new_name: String)
+
 interface ApiService {
     @POST("/register")
     suspend fun registerUser(@Body user: User): Response<RegisterResponse>
@@ -71,4 +76,10 @@ interface ApiService {
 
     @GET("/protected")
     suspend fun getProtectedData(): Response<SomeDataModel>
+
+    @PUT("/update_name")
+    fun updateName(
+        @Header("Authorization") token: String,
+        @Body request: UpdateNameRequest
+    ): Call<UpdateNameResponse>
 }
