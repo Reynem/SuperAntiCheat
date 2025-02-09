@@ -41,6 +41,11 @@ data class User(
     val password: String
 )
 
+data class UserResponse(
+    val name: String,
+    val email: String
+)
+
 data class UserLogin(
     val email: String,
     val password: String
@@ -82,4 +87,7 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Body request: UpdateNameRequest
     ): Call<UpdateNameResponse>
+
+    @GET("/get_user")
+    fun getUser(@Header("Authorization") token: String): Call<UserResponse>
 }
