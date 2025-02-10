@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         val cameraFunc: Button = findViewById(R.id.Camera)
         cameraFunc.setOnClickListener {
             if (AuthManager.isLoggedIn) {
-                startCameraFunction()
+                val intent = Intent(this, CameraActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Для использования функции требуется авторизация", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java).apply {
@@ -43,10 +45,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
-    }
-    private fun startCameraFunction() {
-        println("Функция запущена")
-        startActivity(Intent(this, CameraActivity::class.java))
     }
 }
 
