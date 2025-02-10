@@ -65,19 +65,6 @@ data class RegisterResponse(
     val user_id: Long
 )
 
-data class DetectionResponse(
-    val detections: List<DetectionResult>
-)
-
-data class DetectionResult(
-    val x1: Int,
-    val y1: Int,
-    val x2: Int,
-    val y2: Int,
-    val confidence: Float,
-    val class_id: Int,
-    val class_name: String?
-)
 
 data class SomeDataModel(
     val id: Int,
@@ -107,10 +94,4 @@ interface ApiService {
 
     @GET("/get_user")
     fun getUser(@Header("Authorization") token: String): Call<UserResponse>
-
-    @Multipart
-    @POST("detect/")
-    suspend fun detectObject(
-        @Part image: MultipartBody.Part
-    ): Response<DetectionResponse>
 }
