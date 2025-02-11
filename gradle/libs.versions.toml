@@ -15,6 +15,10 @@ retrofit = "2.11.0"
 converterGson = "2.11.0"
 lifecycleRuntimeKtx = "2.9.0-alpha08"
 cameraCore = "1.4.1"
+cameraCoreVersion = "1.5.0-alpha05"
+cameraLifecycle = "1.5.0-alpha05"
+cameraCamera2 = "1.5.0-alpha05"
+cameraView = "1.5.0-alpha05"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +35,10 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraCore" }
+camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraCoreVersion" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraCamera2" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

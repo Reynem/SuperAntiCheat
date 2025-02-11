@@ -16,7 +16,8 @@ import okhttp3.RequestBody
 import java.io.ByteArrayOutputStream
 import okhttp3.MediaType
 import showNotification
-import DetectionService
+import com.example.superanticheat.addition.DetectionService
+
 
 fun ImageProxy.toBitmap(): Bitmap? {
     val yBuffer = planes[0].buffer
