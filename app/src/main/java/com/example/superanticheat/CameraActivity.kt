@@ -13,8 +13,6 @@ import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import com.example.superanticheat.addition.CameraAnalyzer
 import com.example.superanticheat.addition.DetectionService
-import com.example.superanticheat.RetrofitClient.getDetectionService
-
 
 class CameraActivity : AppCompatActivity() {
     private lateinit var viewFinder: PreviewView

@@ -13,9 +13,10 @@ import retrofit2.http.POST
 import retrofit2.Call
 import retrofit2.http.Header
 import retrofit2.http.PUT
+import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val BASE_URL = "https://v17m8n-2-135-114-44.ru.tuna.am" // придется постоянно менять
+    private const val BASE_URL = "https://suq6pf-2-135-114-44.ru.tuna.am" // придется постоянно менять
     private val authInterceptor = Interceptor { chain ->
         val request = chain.request().newBuilder()
             .addHeader("Authorization", "Bearer ${AuthManager.accessToken}")
@@ -25,6 +26,9 @@ object RetrofitClient {
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(authInterceptor)
+        .connectTimeout(60, TimeUnit.SECONDS)
+        .readTimeout(60, TimeUnit.SECONDS)
+        .writeTimeout(60, TimeUnit.SECONDS)
         .build()
 
     private val retrofit = Retrofit.Builder()
