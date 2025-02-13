@@ -1,11 +1,11 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+
 
     <Button
         android:id="@+id/backButton"
@@ -27,39 +27,39 @@
         android:id="@+id/nameInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeWidth="1dp"
+        android:hint="@string/Name"
         app:boxStrokeColor="@color/black"
-        android:hint="@string/Name"/>
+        app:boxStrokeWidth="1dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeWidth="1dp"
+        android:hint="@string/Email"
         app:boxStrokeColor="@color/black"
-        android:hint="@string/Email">
+        app:boxStrokeWidth="1dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeWidth="1dp"
-        app:boxStrokeColor="@color/black"
         android:hint="@string/Password"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

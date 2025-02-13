@@ -66,8 +66,14 @@ fun sendFrameToServer(
             if (response.isSuccessful) {
                 val detectionResponse = response.body()
                 val detections = detectionResponse?.detections
+                Log.d("Detection", "дошел до обработки нулл или нет")
                 if (detections != null) {
+                    Log.d("Detection", "не нулл")
+
                     for (detection in detections) {
+                        withContext(Dispatchers.Main) {
+                            showNotification(context, "Обнаружено", "Получен ответ: ${detection.class_name ?: detection.class_id}")
+                        }
                         Log.d("Detection", "class_id: ${detection.class_id}, targetClassId: $targetClassId")
                         if (detection.class_id == targetClassId) {
                             withContext(Dispatchers.Main) {
