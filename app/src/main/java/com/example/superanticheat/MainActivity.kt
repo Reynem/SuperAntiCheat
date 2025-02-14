@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-        val cameraFunc: Button = findViewById(R.id.Camera)
+        val cameraFunc: ImageButton = findViewById(R.id.Camera)
         cameraFunc.setOnClickListener {
             if (AuthManager.isLoggedIn) {
                 val intent = Intent(this, CameraActivity::class.java)
