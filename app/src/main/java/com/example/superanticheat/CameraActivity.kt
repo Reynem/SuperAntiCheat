@@ -1,8 +1,10 @@
 package com.example.superanticheat
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.Size
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -26,7 +28,11 @@ class CameraActivity : AppCompatActivity() {
         viewFinder = findViewById(R.id.viewFinder)
 
         detectionService = RetrofitClient.getDetectionService()
-
+        val backMain: Button = findViewById(R.id.button_open_main)
+        backMain.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         startCamera()
     }
 
