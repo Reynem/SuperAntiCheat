@@ -79,6 +79,7 @@ fun sendFrameToServer(
                             withContext(Dispatchers.Main) {
                                 try {
                                     showNotification(context, "Обнаружен объект", "Обнаружен объект с id: $targetClassId")
+                                    showNotification(context, "Обнаружен объект", "Необходимо принять меры против списывания!")
                                 } catch (e: Exception) {
                                     Log.e("Notification", "Error showing notification: ${e.message}")
                                 }

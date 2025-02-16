@@ -19,6 +19,7 @@ cameraCoreVersion = "1.5.0-alpha05"
 cameraLifecycle = "1.5.0-alpha05"
 cameraCamera2 = "1.5.0-alpha05"
 cameraView = "1.5.0-alpha05"
+glide = "5.0.0-rc01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +40,7 @@ camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "
 androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
 androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraCamera2" }
 androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
