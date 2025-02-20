@@ -26,7 +26,7 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/Settings"
         android:scaleType="centerCrop"
-        android:src="@drawable/settings"
+        android:src="@drawable/settings_new"
         android:text="@string/Settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -41,7 +41,7 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/camera"
         android:scaleType="centerInside"
-        android:src="@drawable/camera_ico"
+        android:src="@drawable/camera_new"
         android:text="@string/camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/account"
