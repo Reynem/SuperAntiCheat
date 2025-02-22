@@ -58,13 +58,16 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), REQUEST_CAMERA_PERMISSION)
         }
 
+
+
+    }
+    override fun onResume() {
+        super.onResume()
         val gifImageView: ImageView = findViewById(R.id.gifImageView)
         Glide.with(this)
             .asGif()
             .load(R.drawable.animation)
             .into(gifImageView)
-
     }
-
 }
 
