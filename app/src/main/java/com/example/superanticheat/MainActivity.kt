@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val accounts: Button = findViewById(R.id.account)
+        val accounts: ImageButton = findViewById(R.id.account)
         accounts.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
