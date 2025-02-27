@@ -19,7 +19,7 @@ import com.example.superanticheat.addition.DetectionService
 class CameraActivity : AppCompatActivity() {
     private lateinit var viewFinder: PreviewView
     private lateinit var detectionService: DetectionService
-    private val targetClassId = 1
+    private val targetClassId = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

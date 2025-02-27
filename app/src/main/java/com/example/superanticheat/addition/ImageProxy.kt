@@ -73,8 +73,9 @@ fun sendFrameToServer(
                     for (detection in detections) {
                         withContext(Dispatchers.Main) {
                             showNotification(context, "Обнаружено", "Получен ответ: ${detection.class_name ?: detection.class_id}")
+
                         }
-                        Log.d("Detection", "class_id: ${detection.class_id}, targetClassId: $targetClassId")
+                        Log.d("Detection", "class_id: ${detection.class_id}, targetClassId: $targetClassId, class_name: ${detection.class_name}")
                         if (detection.class_id == targetClassId) {
                             withContext(Dispatchers.Main) {
                                 try {
